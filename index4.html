@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Questão 3</title>
+</head>
+<body>
+  População A
+  <input type="number" id="IdPopA"><br>
+  População B
+  <input type="number" id="IdPopB"><br>
+  Crescimento A
+  <input type="number" id="IdCreA"><br>
+  Crescimento B
+  <input type="number" id="IdCreB"><br>
+  <button onclick="calcular()">Calcular</button>
+  <script>
+
+    var populacaoA = document.getElementById("idPopA");
+    var populacaoB = document.getElementById("idPopB");
+    var crescimentoA = document.getElementById("idCreA");
+    var crescimentoB = document.getElementById("idCreB");
+    let crescA = crescimentoA / 100;
+    let crescB = crescimentoB / 100;
+    let anos = 0
+    let atingiu = true
+    function calcular(){
+    for (anos = 0; atingiu; anos++){
+      populacaoA = populacaoA + (populacaoA*crescA)
+      populacaoB = populacaoB + (populacaoB*crescB)
+      if(populacaoA > populacaoB){
+        atingiu = false
+      }
+      alert("Levará " + anos + " anos para a cidade A passar a cidade B no numero de habitantes.")
+    }
+    
+  }
+
+  </script>
+</body>
+</html>

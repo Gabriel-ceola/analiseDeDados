@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Questão 1</title>
+
+</head>
+<body> 
+  <span>Digite seu nome</span>
+  <input type="text" id="idNome">
+  <br>
+  <span>Digite sua senha</span>
+  <input type="password" id="idSenha">
+  <br>
+  <button onclick="cadastrar()">Cadastrar</button>
+  <script>
+      var nome = document.getElementById("idNome");
+      var senha = document.getElementById("idSenha");
+    function cadastrar(nome, senha){
+      if (nome = senha){
+        alert("A senha deve ser diferente do nome");
+        document.getElementById('idNome').value='';
+        document.getElementById('idSenha').value='';
+      } else {
+        alert("Pronto");
+      }
+    }
+  </script>
+</body>
+</html>
